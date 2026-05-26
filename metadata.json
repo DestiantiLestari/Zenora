@@ -1,0 +1,8 @@
+{
+  "name": "Zenora",
+  "description": "SaaS Platform for Maternal Mental Health and Pregnancy Care",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
