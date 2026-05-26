@@ -115,46 +115,46 @@ export default function Navbar({ currentTab, onTabChange, currentUser }: NavbarP
             transition={{ duration: 0.2 }}
             className="lg:hidden border-t border-[#F4E1E1] bg-[#FFFDFB]/98"
           >
-            <div className="px-2 pt-2 pb-4 space-y-1">
+            <div className="px-3 pt-3 pb-6 space-y-1.5">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all ${
+                  className={`block w-full text-left px-5 py-3.5 rounded-xl text-lg font-bold transition-all ${
                     currentTab === item.id
-                      ? 'bg-[#FCEEEF] text-[#D48C8C] font-semibold'
+                      ? 'bg-[#FCEEEF] text-[#D48C8C] shadow-3xs'
                       : 'text-[#5E4C4C] hover:bg-[#FAF4F0]'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-4 pb-2 border-t border-[#FAF1F1] px-4 flex flex-col space-y-3">
+              <div className="pt-5 pb-2 border-t border-[#FAF1F1] px-4 flex flex-col space-y-3.5">
                 <div className="flex items-center space-x-2 text-[#BF7575] justify-center px-2 py-1">
-                  <Sparkles className="h-4 w-4 text-[#D48C8C]" />
-                  <span className="text-xs font-mono font-bold">Zenora AI Clinician Active</span>
+                  <Sparkles className="h-4.5 w-4.5 text-[#D48C8C]" />
+                  <span className="text-sm font-mono font-bold tracking-wide">Zenora AI Clinician Active</span>
                 </div>
                 
                 {currentUser ? (
                   <button 
                     onClick={() => handleNavClick('auth')}
-                    className="w-full text-center bg-[#FAF6F0] hover:bg-[#FAECEC] text-[#4F3E3E] border border-[#FAECEC] px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 cursor-pointer transition-colors"
+                    className="w-full text-center bg-[#FAF6F0] hover:bg-[#FAECEC] text-[#4F3E3E] border border-[#FAECEC] px-5 py-3.5 rounded-2xl text-sm font-extrabold flex items-center justify-center space-x-2.5 cursor-pointer transition-colors"
                   >
-                    <span className="text-base">{currentUser.avatarEmoji || '🤰'}</span>
+                    <span className="text-xl">{currentUser.avatarEmoji || '🤰'}</span>
                     <span>{currentUser.name} (My Profile)</span>
                   </button>
                 ) : (
                   <button 
                     onClick={() => handleNavClick('auth')}
-                    className="w-full text-center bg-[#FCEEEF]/60 hover:bg-[#FCEEEF] text-[#D48C8C] border border-[#FAECEC] px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-1.5 cursor-pointer transition-colors"
+                    className="w-full text-center bg-[#FCEEEF]/70 hover:bg-[#FCEEEF] text-[#D48C8C] border border-[#FAECEC] px-5 py-3.5 rounded-2xl text-sm font-extrabold flex items-center justify-center space-x-2 cursor-pointer transition-colors"
                   >
-                    <span>🔐 Sign In / Register</span>
+                    <span>🔐 Sign In / Register Patient</span>
                   </button>
                 )}
-
+ 
                 <button 
                   onClick={() => handleNavClick('consultations')}
-                  className="w-full text-center bg-[#D48C8C] text-white px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider font-mono hover:bg-[#C27B7B] transition-colors cursor-pointer"
+                  className="w-full text-center bg-[#D48C8C] text-white px-5 py-4 rounded-2xl text-sm font-extrabold uppercase tracking-widest font-mono hover:bg-[#C27B7B] transition-all cursor-pointer shadow-3xs"
                 >
                   Book Virtual Consult
                 </button>

@@ -369,7 +369,7 @@ export default function AuthPortal({
               <div className="flex bg-[#FAF6F0] p-1.5 rounded-2xl border border-[#FAECEC] w-full">
                 <button
                   onClick={() => { setActiveMode('login'); setLoginErr(''); }}
-                  className={`w-1/2 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                  className={`w-1/2 py-2.5 rounded-xl text-sm md:text-xs font-bold transition-all ${
                     activeMode === 'login'
                       ? 'bg-[#D48C8C] text-white shadow-3xs'
                       : 'text-[#8C7A7A] hover:text-[#4F3E3E]'
@@ -379,7 +379,7 @@ export default function AuthPortal({
                 </button>
                 <button
                   onClick={() => { setActiveMode('register'); setRegErr(''); }}
-                  className={`w-1/2 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                  className={`w-1/2 py-2.5 rounded-xl text-sm md:text-xs font-bold transition-all ${
                     activeMode === 'register'
                       ? 'bg-[#D48C8C] text-white shadow-3xs'
                       : 'text-[#8C7A7A] hover:text-[#4F3E3E]'
@@ -401,7 +401,7 @@ export default function AuthPortal({
                   )}
 
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Email Address</label>
+                    <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Email Address</label>
                     <div className="relative">
                       <Mail className="absolute left-3.5 top-3.5 h-4.5 w-4.5 text-gray-400" />
                       <input
@@ -409,13 +409,13 @@ export default function AuthPortal({
                         placeholder="e.g. sarah@zenora.com"
                         value={loginEmail}
                         onChange={(e) => setLoginEmail(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 text-xs sm:text-sm rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                        className="w-full pl-10 pr-4 py-3.5 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Password Key</label>
+                    <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Password Key</label>
                     <div className="relative">
                       <Key className="absolute left-3.5 top-3.5 h-4.5 w-4.5 text-gray-400" />
                       <input
@@ -423,7 +423,7 @@ export default function AuthPortal({
                         placeholder="••••••••"
                         value={loginPassword}
                         onChange={(e) => setLoginPassword(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 text-xs sm:text-sm rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                        className="w-full pl-10 pr-4 py-3.5 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                       />
                     </div>
                   </div>
@@ -451,7 +451,7 @@ export default function AuthPortal({
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Full Name</label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Full Name</label>
                       <div className="relative">
                         <UserIcon className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                         <input
@@ -459,13 +459,13 @@ export default function AuthPortal({
                           placeholder="Sarah Sterling"
                           value={regName}
                           onChange={(e) => setRegName(e.target.value)}
-                          className="w-full pl-8.5 pr-4 py-2.5 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                          className="w-full pl-8.5 pr-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Email</label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Email</label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                         <input
@@ -473,7 +473,7 @@ export default function AuthPortal({
                           placeholder="sarah@example.com"
                           value={regEmail}
                           onChange={(e) => setRegEmail(e.target.value)}
-                          className="w-full pl-8.5 pr-4 py-2.5 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                          className="w-full pl-8.5 pr-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                         />
                       </div>
                     </div>
@@ -481,24 +481,24 @@ export default function AuthPortal({
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Secure Password</label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Secure Password</label>
                       <input
                         type="password"
                         placeholder="••••••••"
                         value={regPassword}
                         onChange={(e) => setRegPassword(e.target.value)}
-                        className="w-full px-4 py-2.5 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                        className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Confirm Password</label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Confirm Password</label>
                       <input
                         type="password"
                         placeholder="••••••••"
                         value={regConfirmPassword}
                         onChange={(e) => setRegConfirmPassword(e.target.value)}
-                        className="w-full px-4 py-2.5 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                        className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                       />
                     </div>
                   </div>
@@ -541,30 +541,30 @@ export default function AuthPortal({
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Partner's Name <span className="text-slate-300">(Optional)</span></label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Partner's Name <span className="text-slate-300">(Optional)</span></label>
                       <input
                         type="text"
                         placeholder="Andrew"
                         value={regPartnerName}
                         onChange={(e) => setRegPartnerName(e.target.value)}
-                        className="w-full px-4 py-2.5 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                        className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Expected Due Date <span className="text-slate-300">(Optional)</span></label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Expected Due Date <span className="text-slate-300">(Optional)</span></label>
                       <input
                         type="date"
                         value={regDueDate}
                         onChange={(e) => setRegDueDate(e.target.value)}
-                        className="w-full px-4 py-2.5 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                        className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                       />
                     </div>
                   </div>
 
                   {/* Avatar Picker segment */}
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Select Profile Icon Avatar</label>
+                    <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Select Profile Icon Avatar</label>
                     <div className="flex flex-wrap gap-2">
                       {avatarList.map(emoji => (
                         <button
@@ -733,22 +733,22 @@ export default function AuthPortal({
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Display Profile Name</label>
+                        <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Display Profile Name</label>
                         <input
                           type="text"
                           value={editName}
                           onChange={(e) => setEditName(e.target.value)}
-                          className="w-full px-4 py-2 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                          className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                         />
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Birth Partner's Name</label>
+                        <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Birth Partner's Name</label>
                         <input
                           type="text"
                           value={editPartnerName}
                           onChange={(e) => setEditPartnerName(e.target.value)}
-                          className="w-full px-4 py-2 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                          className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                         />
                       </div>
                     </div>
@@ -756,7 +756,7 @@ export default function AuthPortal({
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       
                       <div className="space-y-1.5">
-                        <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Pregnancy Week Slider</label>
+                        <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Pregnancy Week Slider</label>
                         <div className="flex items-center space-x-3 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
                           <input
                             type="range"
@@ -771,19 +771,19 @@ export default function AuthPortal({
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Adjust Target Due Date</label>
+                        <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Adjust Target Due Date</label>
                         <input
                           type="date"
                           value={editDueDate}
                           onChange={(e) => setEditDueDate(e.target.value)}
-                          className="w-full px-4 py-2 text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
+                          className="w-full px-4 py-3 text-sm md:text-xs rounded-xl border border-gray-200 focus:outline-hidden focus:border-[#D48C8C]"
                         />
                       </div>
 
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Revise Avatar Emoji</label>
+                      <label className="text-sm md:text-[11px] font-mono text-[#8C7A7A] uppercase font-bold">Revise Avatar Emoji</label>
                       <div className="flex flex-wrap gap-2">
                         {avatarList.map(emoji => (
                           <button

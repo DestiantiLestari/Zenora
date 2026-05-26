@@ -7,9 +7,39 @@
   --font-serif: "Playfair Display", Georgia, serif;
 }
 
+/* Base root adjustments for mobile readability & responsiveness */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 17px; /* Enlarges everything using rem on mobile/tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 18px; /* Further enlarges fonts, inputs, and touch targets on narrow smartphones */
+  }
+}
+
 body {
   font-family: var(--font-sans);
   background-color: #FAF6F0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile responsive interactive focus improvements */
+input, select, textarea, button {
+  font-size: 1rem !important; /* Prevents auto-zoom issues on iOS, ensures crisp reading on mobile */
+}
+
+@media (min-width: 769px) {
+  input, select, textarea, button {
+    font-size: inherit !important;
+  }
 }
 
 /* Custom scrollbars for a premium polished feel */
